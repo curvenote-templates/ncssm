@@ -1,0 +1,48 @@
+myst: v1
+kind: typst
+title: NCSSM Template
+description: North Carolina School of Science and Mathematics Template
+template: template.typ
+files:
+  - template.typ
+  - ncssm.typ
+  - logo.png
+  - pubmatter.typ
+  - validate-frontmatter.typ
+authors:
+  - name: Rowan Cockett
+    github: rowanc1
+    affiliations:
+      - Curvenote
+  - name: Franklin Koch
+    github: fwkoch
+    affiliations:
+      - Curvenote
+version: 0.0.1
+license: MIT
+tags:
+  - preprint
+  - article
+  - paper
+thumbnail: ./thumbnail.png
+github: https://github.com/curvenote-templates/ncssm
+doc:
+  - id: title
+    required: true
+  - id: authors
+    required: true
+  - id: subtitle
+  - id: short_title
+  - id: open_access
+  - id: keywords
+  - id: doi
+  - id: github
+parts:
+  - id: abstract
+    description: >
+      An abstract is a short summary of your research paper or report.
+    max_words: 500
+    required: true
+  - id: first_page
+    description: Content that will show up on the first page, after the abstract.
+    required: true
