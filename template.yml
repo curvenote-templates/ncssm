@@ -45,4 +45,3 @@ parts:
     required: true
   - id: first_page
     description: Content that will show up on the first page, after the abstract.
-    required: true
