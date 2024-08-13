@@ -66,6 +66,9 @@
     license: (id: "[-doc.license.content.id-]", name: "[-doc.license.content.name-]", url: "[-doc.license.content.url-]"),
   [# endif #]
   ),
+  [# if doc.biblio.first_page #]
+  page-start: [-doc.biblio.first_page-]
+  [# endif #]
 )
 
 [# if parts.first_page #]

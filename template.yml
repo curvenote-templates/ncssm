@@ -37,6 +37,7 @@ doc:
   - id: keywords
   - id: doi
   - id: github
+  - id: biblio
 parts:
   - id: abstract
     description: >
