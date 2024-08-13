@@ -45,7 +45,7 @@
       inset: (top: 8pt, right: 2pt),
       [
         #set text(font: theme.font, size: 9pt, fill: gray.darken(50%))
-        The Morganton Scientific | Issue 1 | 2023 - 2024
+        The Morganton Scientific | Volume 1 | 2023 - 2024
         #h(1fr)
         #counter(page).display()
       ]
