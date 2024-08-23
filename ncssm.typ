@@ -45,7 +45,7 @@
       inset: (top: 8pt, right: 2pt),
       [
         #set text(font: theme.font, size: 9pt, fill: gray.darken(50%))
-        The Morganton Scientific | Volume 1 | 2023 - 2024
+        Morganton Scientific | Volume 1 | 2023 - 2024
         #h(1fr)
         #counter(page).display()
       ]
@@ -57,13 +57,13 @@
     #image("logo.png")
     #v(-13pt)
     #align(left)[
-      #text(size: 22pt, weight: "bold", fill: rgb("#000000"), font: theme.font)[The Morganton Scientific]
+      #text(size: 19pt, weight: "bold", fill: rgb("#000000"), font: theme.font)[Morganton Scientific]
       #v(-6pt)
       #text(size: 12pt, style: "italic", weight: "light", fill: rgb("#000000"), font: theme.font)[North Carolina School of Science and Mathematics]
     ]
     #v(5pt)
     #set par(justify: true)
-    #text(size: 7pt, fill: black.lighten(20%), font: theme.font)[
+    #text(size: 6pt, fill: black.lighten(20%), font: theme.font)[
       Journal of Student STEM Research
     ]
     // #text(size: 6pt, fill: black.lighten(40%), font: theme.font)[
