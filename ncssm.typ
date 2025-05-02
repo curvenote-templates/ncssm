@@ -1,5 +1,4 @@
-// #import "@preview/pubmatter:0.1.0"
-#import "pubmatter/pubmatter.typ"
+#import "@preview/pubmatter:0.2.0"
 #import "@preview/scienceicons:0.0.6": curvenote-icon
 
 #let leftCaption(it) = {
@@ -26,7 +25,7 @@
 ) = {
   let fm = pubmatter.load(frontmatter)
   let dates;
-  if ("date" in fm and type(fm.date) == "datetime") {
+  if ("date" in fm and type(fm.date) == datetime) {
     dates = ((title: "Published", date: fm.date),)
   } else {
     dates = date
@@ -45,7 +44,7 @@
       inset: (top: 8pt, right: 2pt),
       [
         #set text(font: theme.font, size: 9pt, fill: gray.darken(50%))
-        Morganton Scientific | Volume 1 | 2023 - 2024
+        Morganton Scientific | Volume 2 | 2024 - 2025
         #h(1fr)
         #counter(page).display()
       ]
@@ -146,7 +145,7 @@
       box(
         width: 27%,
         {
-          if (type(logo) == "content") {
+          if (type(logo) == content) {
             logo
           } else {
             image(logo, width: 100%)
