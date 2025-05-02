@@ -1,7 +1,7 @@
-#import "@preview/pubmatter:0.2.0"
-#import "@preview/scienceicons:0.0.6": curvenote-icon
+#import "@preview/pubmatter:0.2.1"
+#import "@preview/scienceicons:0.1.0": curvenote-icon
 
-#let leftCaption(it) = {
+#let leftCaption(it) = context {
   set text(size: 8pt)
   set align(left)
   set par(justify: true)
@@ -42,7 +42,7 @@
       width: 100%,
       stroke: (top: 1pt + gray),
       inset: (top: 8pt, right: 2pt),
-      [
+      context [
         #set text(font: theme.font, size: 9pt, fill: gray.darken(50%))
         Morganton Scientific | Volume 2 | 2024 - 2025
         #h(1fr)
@@ -50,7 +50,11 @@
       ]
     ),
   )
-  if (page-start != none) {counter(page).update(page-start)}
+  if (page-start != none) {
+    context [
+      #counter(page).update(page-start)
+    ]
+  }
   state("THEME").update(theme)
   let logo = [
     #image("logo.png")
@@ -95,7 +99,8 @@
 
   // Configure headings.
   set heading(numbering: heading-numbering)
-  show heading: it => locate(loc => {
+  show heading: it => context {
+    let loc = here()
     // Find out the final number of the heading counter.
     let levels = counter(heading).at(loc)
     set text(10pt, weight: 400)
@@ -134,7 +139,7 @@
       }
       _#(it.body):_
     ]
-  })
+  }
 
 
   if (logo != none) {
@@ -196,7 +201,7 @@
     box(width: 27%, {
       set text(font: theme.font)
       if (kind != none) {
-        show par: set block(spacing: 0em)
+        show par: set par(spacing: 0em)
         text(11pt, fill: theme.color, weight: "semibold", smallcaps(kind))
         parbreak()
       }
@@ -244,7 +249,7 @@
 
   pubmatter.show-abstract-block(fm)
 
-  show par: set block(spacing: 1.4em)
+  show par: set par(spacing: 1.4em)
 
   show raw.where(block: true): (it) => {
       set text(size: 8pt)
