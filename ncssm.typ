@@ -37,7 +37,7 @@
   set page(
     paper: paper-size,
     margin: (left: 25%),
-    header: pubmatter.show-page-header(theme: theme, fm),
+    header: pubmatter.show-page-header(fm),
     footer: block(
       width: 100%,
       stroke: (top: 1pt + gray),
