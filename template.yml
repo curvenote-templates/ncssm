@@ -7,8 +7,6 @@ files:
   - template.typ
   - ncssm.typ
   - logo.png
-  - pubmatter/pubmatter.typ
-  - pubmatter/validate-frontmatter.typ
 authors:
   - name: Rowan Cockett
     github: rowanc1
