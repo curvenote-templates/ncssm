@@ -247,7 +247,11 @@
     }),
   )
 
-  pubmatter.show-abstract-block(fm)
+  if ("abstracts" in fm) {
+    pubmatter.show-abstract-block(fm)
+  } else if ("keywords" in fm) {
+    pubmatter.show-keywords(fm)
+  }
 
   show par: set par(spacing: 1.4em)
 

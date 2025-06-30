@@ -41,6 +41,5 @@ parts:
     description: >
       An abstract is a short summary of your research paper or report.
     max_words: 500
-    required: true
   - id: first_page
     description: Content that will show up on the first page, after the abstract.
