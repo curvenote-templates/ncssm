@@ -1,4 +1,4 @@
-#import "@preview/pubmatter:0.2.1"
+#import "@preview/pubmatter:0.2.2"
 #import "@preview/scienceicons:0.1.0": curvenote-icon
 
 #let leftCaption(it) = context {
