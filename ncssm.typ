@@ -45,7 +45,7 @@
       inset: (top: 8pt, right: 2pt),
       context [
         #set text(font: theme.font, size: 9pt, fill: gray.darken(50%))
-        Morganton Scientific | Volume 2 | 2024 - 2025
+        Morganton Scientific | Volume 3 | 2025 - 2026
         #h(1fr)
         #counter(page).display()
       ]
