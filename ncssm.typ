@@ -34,6 +34,7 @@
   // Set document metadata.
   set document(title: fm.title, author: fm.authors.map(author => author.name))
   let theme = (color: rgb("#C18849"), font: "Noto Sans")
+  state("THEME").update(theme)
   set page(
     paper: paper-size,
     margin: (left: 25%),
@@ -55,7 +56,6 @@
       #counter(page).update(page-start)
     ]
   }
-  state("THEME").update(theme)
   let logo = [
     #image("logo.png")
     #v(-13pt)
